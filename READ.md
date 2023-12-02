@@ -541,8 +541,11 @@ end
 
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 local window = DrRayLibrary:Load("DrRay", "Default")
-
 local tab = DrRayLibrary.newTab("My Tab", "ImageIdHere")
-tab.newToggle("Auto Farm [ออโต้]", "Toggle! (prints the state)", false, function(value)
- _G.Auto_Farm = value
+tab.newToggle("Auto Farm [ออโต้]", "Toggle! (prints the state)", false, function(state)
+    if state then
+        _G.Auto_Farm = true
+    else
+        _G.Auto_Farm = false
+    end
 end)
