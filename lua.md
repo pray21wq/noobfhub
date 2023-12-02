@@ -10,7 +10,6 @@ game.StarterGui:SetCore("SendNotification", {
     Duration = "10";
     Callback = NotificationBindable;
 })
-wait(10)
 spawn(function()
     while wait(1) do
 		pcall(function()
